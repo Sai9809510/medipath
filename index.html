@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Information Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Patient Information</h1>
+    <form id="patientForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter your age" required>
+      
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <label for="illness">Describe Your Illness:</label>
+      <textarea id="illness" name="illness" rows="4" placeholder="Describe your illness or symptoms" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;">
+      <h2>Patient Report</h2>
+      <p id="patientDetails"></p>
+      <h3>Recommended Tests:</h3>
+      <ul id="testList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
